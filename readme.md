@@ -40,3 +40,5 @@ iptables -t nat -A PREROUTING --dst 192.168.31.6 -p tcp --dport 9090 -j DNAT --t
 # 返回
 iptables -t nat -A POSTROUTING --dst 192.168.31.7 -p tcp --dport 80 -j SNAT --to-source 192.168.31.6
 ```
+
+# 启动后如果能ping IP，但不能ping网址，请先设置DNS
